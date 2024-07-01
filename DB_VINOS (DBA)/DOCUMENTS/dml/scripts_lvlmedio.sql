@@ -1,0 +1,213 @@
+SELECT CODIGO_VINO, 
+NVL(DESCRIPCION, 'Descripción no disponible') AS DESCRIPCION, 
+CATEGORIA 
+FROM VINO; 
+ 
+
+--Ejecutar una sentencia que utiliza la función NVL2. 
+
+SELECT CODIGO_VINO, 
+
+       NVL2(DESCRIPCION, DESCRIPCION, 'Descripción No Disponible') AS DESCRIPCION, 
+
+       CATEGORIA, 
+
+       AÑO_ELABOR, 
+
+       BODEGA 
+
+FROM VINO; 
+ 
+
+-- Ejecutar una sentencia que utiliza la función NULLIF. 
+
+SELECT B.DESCRIPCION AS NOMBRE_BODEGA 
+
+FROM BODEGA B 
+
+LEFT JOIN ( 
+
+    SELECT DISTINCT V.BODEGA 
+
+    FROM VINO V 
+
+) V ON B.CODIGO_BODEGA = V.BODEGA 
+
+WHERE NULLIF(V.BODEGA, V.BODEGA) IS NULL; 
+ 
+
+-- Ejecutar una sentencia que utiliza la función COALESCE. 
+
+SELECT B.DESCRIPCION AS NOMBRE_BODEGA, 
+
+       COALESCE(MAX(V.DESCRIPCION), 'Sin Vinos Asociados') AS DESCRIPCION_VINO 
+
+FROM BODEGA B 
+
+LEFT JOIN VINO V ON B.CODIGO_BODEGA = V.BODEGA 
+
+GROUP BY B.DESCRIPCION;  
+
+--Ejecutar una sentencia que utiliza la función CASE. 
+
+SELECT V.DESCRIPCION AS VINO_DESCRIPCION, 
+
+       V.AÑO_ELABOR AS AÑO_ELABORACION, 
+
+       CASE  
+
+           WHEN B.DESCRIPCION IS NULL THEN 'Bodega no especificada' 
+
+           ELSE B.DESCRIPCION 
+
+       END AS BODEGA_DESCRIPCION 
+
+FROM VINO V 
+
+LEFT JOIN BODEGA B ON V.BODEGA = B.CODIGO_BODEGA;  
+
+-- Ejecutar una sentencia que utiliza la función DECODE. 
+
+SELECT V.DESCRIPCION AS VINO_DESCRIPCION, 
+
+       V.AÑO_ELABOR AS AÑO_ELABORACION, 
+
+       DECODE(B.DESCRIPCION, NULL, 'Bodega no especificada', B.DESCRIPCION) AS BODEGA_DESCRIPCION 
+
+FROM VINO V 
+
+LEFT JOIN BODEGA B ON V.BODEGA = B.CODIGO_BODEGA;  
+
+-- Ejecutar una sentencia que utiliza la función de Fila LOWER. 
+
+ SELECT LOWER(DESCRIPCION) AS DESCRIPCION_MINUSCULA 
+FROM BODEGA; 
+ 
+
+-- Ejecutar una sentencia que utiliza la función de Fila UPPER. 
+
+SELECT UPPER(DESCRIPCION) AS CATEGORIA 
+FROM CATEGORIA; 
+ 
+
+--Ejecutar una sentencia que utiliza la función de Fila INITCAP. 
+
+SELECT CODIGO_VINO, INITCAP(DESCRIPCION) AS DESCRIPCION_CAPITALIZADA 
+FROM VINO; 
+ 
+
+--Ejecutar una sentencia que utiliza la función de Fila CONCAT. 
+
+SELECT VINO.DESCRIPCION AS DESCRIPCION_VINO, 
+
+       CATEGORIA.DESCRIPCION AS CATEGORIA_VINO, 
+
+       BODEGA.CODIGO_BODEGA || ' - ' || BODEGA.DESCRIPCION AS BODEGA_DESCRIPCION 
+
+FROM VINO 
+
+JOIN CATEGORIA ON VINO.CATEGORIA = CATEGORIA.DESCRIPCION 
+
+JOIN BODEGA ON VINO.BODEGA = BODEGA.CODIGO_BODEGA; 
+ 
+
+-- Ejecutar una sentencia que utiliza la función de Fila SUBSTR. 
+
+ SELECT SUBSTR(DESCRIPCION, 1, 3) AS PRIMEROS_TRES_CARACTERES 
+FROM VINO; 
+ 
+
+-- Ejecutar una sentencia que utiliza la función de Fila LENGTH. 
+
+SELECT CODIGO_VINO, DESCRIPCION, LENGTH(DESCRIPCION) AS LONGITUD_DESCRIPCION 
+FROM VINO;  
+
+-- Ejecutar una sentencia que utiliza la función de Fila INSTR. 
+
+SELECT CODIGO_VINO, DESCRIPCION, AÑO_ELABOR, BODEGA 
+FROM VINO 
+WHERE INSTR(DESCRIPCION, 'Malbec') > 0;  
+
+-- Ejecutar una sentencia que utiliza la función de Fila LPAD. 
+
+SELECT LPAD(DESCRIPCION, 30) AS DESCRIPCION_ALINEADA 
+FROM VINO; 
+
+  
+-- Ejecutar una sentencia que utiliza la función de Fila TRIM, LTRIM y RTRIM. 
+SELECT  
+
+    CODIGO_CLI, 
+
+    NOM_RAZON AS NOM_RAZON_CON_ESPACIOS, 
+
+    TRIM(NOM_RAZON) AS NOM_RAZON_SIN_ESPACIOS 
+
+FROM  
+
+    CLIENTE; 
+
+SELECT  
+
+    CODIGO_PROV, 
+
+    RAZON_SOCIAL AS RAZON_SOCIAL_CON_ESPACIOS, 
+
+    LTRIM(RAZON_SOCIAL) AS RAZON_SOCIAL_SIN_ESPACIOS_IZQUIERDA 
+
+FROM  
+
+    PROVEEDOR; 
+
+SELECT  
+
+    CODIGO_PROV, 
+
+    RAZON_SOCIAL AS RAZON_SOCIAL_CON_ESPACIOS, 
+
+    RTRIM(RAZON_SOCIAL) AS RAZON_SOCIAL_SIN_ESPACIOS_DERECHA 
+
+FROM  
+
+    PROVEEDOR; 
+
+
+ 
+
+-- Ejecutar una sentencia que utiliza la función de Fila REPLACE. 
+UPDATE BODEGA 
+
+SET DESCRIPCION = REPLACE(DESCRIPCION, 'Bodega', 'Vinoteca'); 
+ 
+
+-- Ejecutar una sentencia que utiliza la función de Fila ROUND.
+
+UPDATE COMPRA 
+SET PRECIO_UNIT = ROUND(PRECIO_UNIT) 
+WHERE PRECIO_UNIT IS NOT NULL;  
+
+ 
+-- Ejecutar una sentencia que utiliza la función de Fila TRUNC. 
+
+ SELECT 
+
+    TRUNC(FECHA, 'YYYY') AS ANIO, 
+
+    CODIGO_CLI, 
+
+    COUNT(*) AS NUM_PEDIDOS 
+
+FROM 
+
+    PEDIDO 
+
+GROUP BY 
+
+    TRUNC(FECHA, 'YYYY'), 
+
+    CODIGO_CLI 
+
+ORDER BY 
+
+    ANIO, CODIGO_CLI; 
+ 
