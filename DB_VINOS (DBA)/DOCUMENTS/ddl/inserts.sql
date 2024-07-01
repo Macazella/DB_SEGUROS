@@ -1,324 +1,228 @@
--- Insertar datos en la tabla BODEGA (DE A 1 A LA VEZ): 
+--Inserts para la Tabla `Categoria` 
 
- 
 
-INSERT INTO BODEGA (CODIGO_BODEGA, DESCRIPCION) 
 
-VALUES (12345, 'Bodega Norton'); 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (1, 'Automóviles');  
 
-; 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (2, 'Hogar'); 
 
- 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (3, 'Vida'); 
 
-INSERT INTO BODEGA (CODIGO_BODEGA, DESCRIPCION) 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (4, 'Salud'); 
 
-VALUES (333435, 'Viña Cobos'); 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (5, 'Viajes'); 
 
-; 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (6, 'Responsabilidad Civil'); 
 
- 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (7, 'Mascotas'); 
 
-INSERT INTO BODEGA (CODIGO_BODEGA, DESCRIPCION) 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (8, 'Tecnología'); 
 
-VALUES (34567, 'Ruca Malen'); 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (9, 'Ahorro'); 
 
-; 
+INSERT INTO Categoria_Seg (CodCat, Descripcion) VALUES (10, 'Educación'); 
 
- 
 
-INSERT INTO BODEGA (CODIGO_BODEGA, DESCRIPCION) 
+  
 
-VALUES (89012, 'Catena Zapata'); 
+--Inserts para la Tabla `Productor` 
 
-; 
 
- 
 
-INSERT INTO BODEGA (CODIGO_BODEGA, DESCRIPCION) 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (1, 'Juan Pérez', '123456789', 'juan.perez@example.com'); 
 
-VALUES (56789, 'Salentein'); 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (2, 'Ana García', '987654321', 'ana.garcia@example.com'); 
 
-; 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (3, 'Carlos López', '456123789', 'carlos.lopez@example.com'); 
 
- 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (4, 'María Fernández', '321654987', 'maria.fernandez@example.com'); 
 
--- Insertar datos en la tabla CATEGORIA (DE A 1 A LA VEZ): 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (5, 'Pedro Martínez', '654987123', 'pedro.martinez@example.com'); 
 
- 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (6, 'Lucía Sánchez', '789321654', 'lucia.sanchez@example.com'); 
 
-INSERT INTO CATEGORIA (CODIGO, DESCRIPCION) 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (7, 'Miguel Ramírez', '321789654', 'miguel.ramirez@example.com'); 
 
-VALUES (1, 'Tintos'); 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (8, 'Laura Torres', '654321987', 'laura.torres@example.com'); 
 
- 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (9, 'Javier Gómez', '987123654', 'javier.gomez@example.com'); 
 
-INSERT INTO CATEGORIA (CODIGO, DESCRIPCION) 
+INSERT INTO Productor (CodProd, Nombre, Telefono, Email) VALUES (10, 'Elena Díaz', '123987456', 'elena.diaz@example.com'); 
 
-VALUES (2, 'Blancos'); 
 
- 
+  
 
-INSERT INTO CATEGORIA (CODIGO, DESCRIPCION) 
+--Inserts para la Tabla `Tomador` 
 
-VALUES (3, 'Rosados'); 
 
- 
 
-INSERT INTO CATEGORIA (CODIGO, DESCRIPCION) 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (1, 'Alberto González', 'Calle Falsa 123', '123456789', 'alberto.gonzalez@example.com'); 
 
-VALUES (4, 'Espumosos'); 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (2, 'María Hernández', 'Avenida Siempre Viva 456', '987654321', 'maria.hernandez@example.com'); 
 
- 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (3, 'Jorge Ruiz', 'Paseo de la Reforma 789', '456123789', 'jorge.ruiz@example.com'); 
 
-INSERT INTO CATEGORIA (CODIGO, DESCRIPCION) 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (4, 'Sofía Jiménez', 'Boulevard de los Sueños 101', '321654987', 'sofia.jimenez@example.com'); 
 
-VALUES (5, 'Dulces'); 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (5, 'Ricardo Morales', 'Camino Real 202', '654987123', 'ricardo.morales@example.com'); 
 
- 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (6, 'Elena Rojas', 'Callejón del Beso 303', '789321654', 'elena.rojas@example.com'); 
 
--- Insertar datos en la tabla PROVEEDOR (DE A 1 A LA VEZ): 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (7, 'Alejandro Torres', 'Carrera de la Vida 404', '321789654', 'alejandro.torres@example.com'); 
 
- 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (8, 'Isabel Vargas', 'Calle de las Flores 505', '654321987', 'isabel.vargas@example.com'); 
 
- 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (9, 'Daniela Pérez', 'Avenida de los Pinos 606', '987123654', 'daniela.perez@example.com'); 
 
-INSERT INTO PROVEEDOR (CODIGO_PROV, RAZON_SOCIAL) 
+INSERT INTO Tomador (CodTomador, Nombre, Direccion, Telefono, Email) VALUES (10, 'Fernando Ramírez', 'Boulevard del Sol 707', '123987456', 'fernando.ramirez@example.com'); 
 
-VALUES (1001, 'Viñedos Los Andes'); 
 
- 
+  
 
-INSERT INTO PROVEEDOR (CODIGO_PROV, RAZON_SOCIAL) 
+--Inserts para la Tabla `Beneficiario` 
 
-VALUES (2002, 'Bodega Norton'); 
 
- 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (1, 'Luis Gómez', 'Calle Falsa 123', '123456789', 'luis.gomez@example.com'); 
 
-INSERT INTO PROVEEDOR (CODIGO_PROV, RAZON_SOCIAL) 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (2, 'Carmen López', 'Avenida Siempre Viva 456', '987654321', 'carmen.lopez@example.com'); 
 
-VALUES (3003, 'Ruca Malen'); 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (3, 'Marta Fernández', 'Paseo de la Reforma 789', '456123789', 'marta.fernandez@example.com'); 
 
- 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (4, 'José Hernández', 'Boulevard de los Sueños 101', '321654987', 'jose.hernandez@example.com'); 
 
-INSERT INTO PROVEEDOR (CODIGO_PROV, RAZON_SOCIAL) 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (5, 'Lucía Ruiz', 'Camino Real 202', '654987123', 'lucia.ruiz@example.com'); 
 
-VALUES (4004, 'Catena Zapata'); 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (6, 'Andrés Morales', 'Callejón del Beso 303', '789321654', 'andres.morales@example.com'); 
 
- 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (7, 'Laura Jiménez', 'Carrera de la Vida 404', '321789654', 'laura.jimenez@example.com'); 
 
-INSERT INTO PROVEEDOR (CODIGO_PROV, RAZON_SOCIAL) 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (8, 'Gabriel Vargas', 'Calle de las Flores 505', '654321987', 'gabriel.vargas@example.com'); 
 
-VALUES (5005, 'Salentein'); 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (9, 'Ana Torres', 'Avenida de los Pinos 606', '987123654', 'ana.torres@example.com'); 
 
- 
+INSERT INTO Beneficiario (CodBenef, Nombre, Direccion, Telefono, Email) VALUES (10, 'Pedro Pérez', 'Boulevard del Sol 707', '123987456', 'pedro.perez@example.com'); 
 
--- Insertar datos en la tabla CLIENTE (DE A 1 A LA VEZ): 
 
- 
+  
 
-INSERT INTO CLIENTE (CODIGO_CLI, CATEGORIA, NOM_RAZON, TELEFONO, EMAIL) 
+--Inserts para la Tabla `Bien` 
 
-VALUES (10001, 'Minorista', 'Tienda La Esquina', '(011) 4567-8901', 'laesquina@email.com'); 
 
- 
 
-INSERT INTO CLIENTE (CODIGO_CLI, CATEGORIA, NOM_RAZON, TELEFONO, EMAIL) 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (1, 'Automóvil Toyota', 20000); 
 
-VALUES (20002, 'Mayorista', 'Distribuidora Los Amigos', '(011) 5555-1234', 'losamigos@email.com'); 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (2, 'Casa en la playa', 150000); 
 
- 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (3, 'Laptop Dell', 1000); 
 
-INSERT INTO CLIENTE (CODIGO_CLI, CATEGORIA, NOM_RAZON, TELEFONO, EMAIL) 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (4, 'Joya de diamantes', 5000); 
 
-VALUES (30003, 'Minorista', 'Supermercado El Ahorro', '(011) 6666-4567', 'elahorro@email.com'); 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (5, 'Moto Yamaha', 7000); 
 
- 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (6, 'Televisor Samsung', 800); 
 
-INSERT INTO CLIENTE (CODIGO_CLI, CATEGORIA, NOM_RAZON, TELEFONO, EMAIL) 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (7, 'Bicicleta Trek', 500); 
 
-VALUES (40004, 'Mayorista', 'Importadora Vinos del Mundo', '(011) 7777-8901', 'vinosdelmundo@email.com'); 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (8, 'Cámara Canon', 1200); 
 
- 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (9, 'Relog Rolex', 15000); 
 
-INSERT INTO CLIENTE (CODIGO_CLI, CATEGORIA, NOM_RAZON, TELEFONO, EMAIL) 
+INSERT INTO Bien (CodBien, Descripcion, Valor) VALUES (10, 'Pintura de Van Gogh', 1000000); 
 
-VALUES (50005, 'Minorista', 'Tienda de Vinos La Cava', '(011) 8888-1234', 'lacava@email.com'); 
+  
 
- 
+-- Inserts para la Tabla `Poliza` 
 
--- Insertar datos en la tabla VINO (DE A 1 A LA VEZ): 
 
- 
-INSERT INTO VINO (CODIGO_VINO, DESCRIPCION, CATEGORIA, AÑO_ELABOR, BODEGA) 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
-VALUES (1, 'Malbec Reserva', 'Tintos', 2018, 12345); 
+VALUES (1, DATE '2023-01-01', 1, 1, 1, 'confirmada', DATE '2023-01-02'); 
 
- 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
-INSERT INTO VINO (CODIGO_VINO, DESCRIPCION, CATEGORIA, AÑO_ELABOR, BODEGA) 
+VALUES (2, DATE '2023-02-01', 2, 2, 2, 'confirmada', DATE '2023-03-02'); 
 
-VALUES (2, 'Chardonnay Gran Reserva', 'Blancos', 2019, 67890); 
+  
 
- 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
-INSERT INTO VINO (CODIGO_VINO, DESCRIPCION, CATEGORIA, AÑO_ELABOR, BODEGA) 
+VALUES (3, DATE '2023-03-01', 3, 3, 3, 'no confirmada', NULL); 
 
-VALUES (3, 'Rose de Malbec', 'Rosados', 2020, 34567); 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
- 
+VALUES (4, DATE '2023-04-01', 4, 4, 4, 'confirmada', DATE '2023-04-02'); 
 
-INSERT INTO VINO (CODIGO_VINO, DESCRIPCION, CATEGORIA, AÑO_ELABOR, BODEGA) 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
-VALUES (4, 'Espumante Brut Nature', 'Espumosos', 2021, 89012); 
+VALUES (5, DATE '2023-05-01', 5, 5, 5, 'no confirmada', NULL); 
 
- 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
-INSERT INTO VINO (CODIGO_VINO, DESCRIPCION, CATEGORIA, AÑO_ELABOR, BODEGA) 
+VALUES (6, DATE '2023-06-01', 6, 6, 6, 'confirmada', DATE '2023-06-02'); 
 
-VALUES (5, 'Malbec Dulce Natural', 'Dulces', 2022, 56789); 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
- 
+VALUES (7, DATE '2023-07-01', 7, 7, 7, 'no confirmada', NULL); 
 
--- Insertar datos en la tabla PEDIDO (DE A 1 A LA VEZ): 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
- 
+VALUES (8, DATE '2023-08-01', 8, 8, 8, 'confirmada', DATE '2023-08-02'); 
 
-INSERT INTO PEDIDO (CODIGO_PEDIDO, CODIGO_VINO, CODIGO_PROV, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
-VALUES (1, 1, 1001, 10001, TO_DATE('2024-06-15', 'YYYY-MM-DD'), 10, 150); 
+VALUES (9, DATE '2023-09-01', 9, 9, 9, 'no confirmada', NULL); 
 
- 
+INSERT INTO Poliza (CodPoliza, FechaEmision, CodCat, CodProd, CodTomador, Estado, FechaConfirmacion)  
 
-INSERT INTO PEDIDO (CODIGO_PEDIDO, CODIGO_VINO, CODIGO_PROV, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+VALUES (10, DATE '2023-10-01', 10, 10, 10, 'confirmada', DATE '2023-10-02'); 
 
-VALUES (2, 2, 2002, 20002, TO_DATE('2024-06-10', 'YYYY-MM-DD'), 12, 200); 
 
- 
 
-INSERT INTO PEDIDO (CODIGO_PEDIDO, CODIGO_VINO, CODIGO_PROV, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+--Inserts para la Tabla `Poliza_Beneficiario` 
 
-VALUES (3, 3, 3003, 30003, TO_DATE('2024-06-12', 'YYYY-MM-DD'), 8, 120); 
 
- 
 
-INSERT INTO PEDIDO (CODIGO_PEDIDO, CODIGO_VINO, CODIGO_PROV, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (1, 1); 
 
-VALUES (4, 4, 4004, 20002, TO_DATE('2024-06-14', 'YYYY-MM-DD'), 5, 250); 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (1, 2); 
 
- 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (2, 3); 
 
-INSERT INTO PEDIDO (CODIGO_PEDIDO, CODIGO_VINO, CODIGO_PROV, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (3, 4); 
 
-VALUES (5, 5, 5005, 10001, TO_DATE('2024-06-13', 'YYYY-MM-DD'), 15, 180); 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (3, 5); 
 
- 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (4, 6); 
 
- 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (5, 7); 
 
--- Insertar datos en la tabla COMPRA (DE A 1 A LA VEZ): 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (6, 8); 
 
- 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (7, 9); 
 
- 
+INSERT INTO Poliza_Beneficiario (CodPoliza, CodBenef) VALUES (8, 10); 
 
-INSERT INTO COMPRA (CODIGO_COMPRA, CODIGO_VINO, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+  
 
-VALUES (1, 1, 10001, TO_DATE('2024-06-15', 'YYYY-MM-DD'), 12, 160); 
+--Inserts para la Tabla `Poliza_Bien` 
 
- 
 
-INSERT INTO COMPRA (CODIGO_COMPRA, CODIGO_VINO, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (1, 1); 
 
-VALUES (2, 3, 20002, TO_DATE('2024-06-10', 'YYYY-MM-DD'), 8, 220); 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (2, 2); 
 
- 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (3, 3); 
 
-INSERT INTO COMPRA (CODIGO_COMPRA, CODIGO_VINO, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (3, 4); 
 
-VALUES (3, 5, 30003, TO_DATE('2024-06-12', 'YYYY-MM-DD'), 10, 150); 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (4, 5); 
 
- 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (5, 6); 
 
-INSERT INTO COMPRA (CODIGO_COMPRA, CODIGO_VINO, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (6, 7); 
 
-VALUES (4, 2, 20002, TO_DATE('2024-06-14', 'YYYY-MM-DD'), 6, 280); 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (7, 8); 
 
- 
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (8, 9); 
 
-INSERT INTO COMPRA (CODIGO_COMPRA, CODIGO_VINO, CODIGO_CLI, FECHA, CANTIDAD, PRECIO_UNIT) 
-
-VALUES (5, 4, 10001, TO_DATE('2024-06-13', 'YYYY-MM-DD'), 15, 190); 
-
- 
-
--- Insertar datos en la tabla CATEGORIA_PROVEEDOR (DE A 1 A LA VEZ): 
-
- 
-
--- Insert 1: Relating 'Viñedos Los Andes' to 'Tintos' and 'Blancos' categories 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (1001, 1, 1500, '2024-06-15', 1200); 
-
- 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (1001, 2, 800, '2024-06-12', 650); 
-
- 
-
--- Insert 2: Relating 'Bodega Norton' to 'Tintos' and 'Espumosos' categories 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (2002, 1, 1200, '2024-06-14', 1000); 
-
- 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (2002, 4, 500, '2024-06-10', 400); 
-
- 
-
--- Insert 3: Relating 'Ruca Malen' to 'Rosados' and 'Dulces' categories 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (3003, 3, 700, '2024-06-13', 550); 
-
- 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (3003, 5, 300, '2024-06-11', 250); 
-
- 
-
--- Insert 4: Relating 'Catena Zapata' to 'Tintos' and 'Blancos' categories 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (4004, 1, 1000, '2024-06-15', 800); 
-
- 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (4004, 2, 600, '2024-06-12', 450); 
-
- 
-
--- Insert 5: Relating 'Salentein' to 'Tintos' and 'Espumosos' categories 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (5005, 1, 800, '2024-06-14', 650); 
-
- 
-
-INSERT INTO CATEGORIA_PROVEEDOR (CODIGO_PROV, CODIGO_CATEGORIA, CANTIDAD, FACTURACION, VENTAS) 
-
-VALUES (5005, 4, 400, '2024-06-10', 300);
+INSERT INTO Poliza_Bien (CodPoliza, CodBien) VALUES (9, 10); 
